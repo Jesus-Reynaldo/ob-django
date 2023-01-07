@@ -1,0 +1,101 @@
+:root{
+  --color-primary:#f7b100;
+  --color-secondary:#FF9100;
+  --color-text:#4B2746;
+  --color-bg:#bdb2bb;
+  --font-title:fresh;
+  --font-text:Cafe;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+}
+nav{
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  background-color: var(--color-primary);
+}
+
+nav img{
+  margin: 25px;
+  width: 64px;
+}
+nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul li{
+  padding: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 30px;
+  font-weight: 700;
+  font-family:var(--font-title);
+}
+nav ul li a:hover{
+  color: white;
+}
+main{
+  background-color: var(--color-bg);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+}
+footer img{
+  width: 90px;
+}
+footer{
+  width: 100vw;
+  min-height: 150px;
+  background-color: var(--color-text);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-title);
+  color:var(--color-text);
+}
+footer ul{
+  list-style-type: none;
+}
+footer ul li a{
+  color:var(--color-bg);
+  text-decoration: none;
+}
+.about{
+  display: flex;
+  padding: 25px;
+}
+.about-content{
+  padding: 10px;
+  width: 350px;
+}
+.photo{
+  margin-top: 50px;
+  display: flex;
+  justify-self: center;
+  width: 60%;
+  flex-wrap: wrap;
+}
+@font-face {
+  font-family: fresh;
+  src: url('../fonts/Fresh.ttf');
+}
+
+@font-face {
+  font-family: Cafe;
+  src: url(../fonts/Cafe.ttf);
+}
