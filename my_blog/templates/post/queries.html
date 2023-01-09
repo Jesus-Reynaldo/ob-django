@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Elementos cuyo id sea menor o igual a 15</h3>
+  <ul>
+    {% for filteredContain in filteredContains %}
+      <li>{{ filteredContain.id }} {{filteredContain.email}} ({{filteredContain.name}})</li>
+    {% endfor %}
+  </ul>
+  <h3>Elementos cuyo id sea menor o igual a 15</h3>
+  <ul>
+    {% for filteredLower in filteredLowers %}
+      <li>{{ filteredLower.id }} {{filteredLower.email}} ({{filteredLower.name}})</li>
+    {% endfor %}
+  </ul>
+  <h3>Elementos ordenados por emailable</h3>
+  <ul>
+    {% for order in orders %}
+      <li>{{ order.id }} {{order.email}} ({{order.name}})</li>
+    {% endfor %}
+  </ul>
+  <h3>Obtener 5 elementos saltando los 5 primeros</h3>
+  <ul>
+    {% for offset in offsets%}
+      <li>{{ offset.id }}{{offset.name}} ({{offset.email}})</li>
+    {% endfor %}
+  </ul>
+  <h3>Obteniendo los 10 primeros</h3>
+  <ul>
+    {% for limit in limits %}
+      <li>{{limit.name}} ({{limit.email}})</li>
+    {% endfor %}
+  </ul>
+  <h3>Obteniendo un unico elemeneto filtrado por id</h3>
+  <p>{{author}} ({{author.email}})</p>
+  <h3>Buscando autor donde email="virginia75@example.net"</h3>
+  <ul>
+      {% for elemento in filtered %}
+        <li>{{elemento.name}} ({{elemento.email}})</li>    
+      {% endfor %}
+  </ul>
+  <h3>Todo los autores</h3>
+  <ul>
+    {% for author in authors %}
+      <li>{{author.name}} ({{author.email}})</li>
+    {% endfor %}
+  </ul>
+  <h3>Total los autores: {{authors|length}}</h3>
+</body>
+</html>
