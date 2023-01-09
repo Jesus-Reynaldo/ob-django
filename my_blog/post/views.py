@@ -35,6 +35,11 @@ def queries(request):
   #Obtener todos los autore que contiene la palabra yes
   filteredContains=Author.objects.filter(name__contains= 'some').order_by('email')
   
-  
   return render(request, 'post/queries.html',{"authors":authors,"filtered":filtered,"author":author,"limits":limits,"offsets":offsets,"orders":orders,"filteredLowers":filterdLowers,"filteredContains":filteredContains})
   
+def update(request):
+  author = Author.objects.get(id=1)
+  author.name="Jesus Reynaldo"
+  author.email="jesus@exemplo.net"
+  author.save()
+  return HttpResponse("modificado")
