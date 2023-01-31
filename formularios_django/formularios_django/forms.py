@@ -20,4 +20,10 @@ class ContactForm(forms.Form):
     label="Message",
     widget=forms.Textarea(attrs={'class': 'form-control'})
     )
-  
+
+  def clean_name(self):
+    name = self.cleaned_data.get('name')
+    if name != "Example":
+      raise forms.ValidationError("Solo el valor 'Example' esta permitido en este campo")
+    else:
+      return name
