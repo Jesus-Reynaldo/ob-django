@@ -1,0 +1,135 @@
+:root{
+  --color-primary:#2ea3f2;
+  --color-text:#666;
+  --font-main: Roboto-Bold;
+  --font-text: Roboto-Regular;
+}
+
+/*Main settings*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+  color: var(--color-text);
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family:Roboto-Regular ;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-main);
+}
+/*End main settings*/
+
+/*Layout settings*/
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: var(--color-primary);
+}
+nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
+nav ul li a{
+  text-decoration: none;
+  color:#fff;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+  padding: 20px;
+  cursor: pointer;
+}
+nav ul li a:hover{
+  color: var(--color-text);
+}
+main{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list{
+  display: flex;
+  border: 1px solid var(--color-text);
+  width: 30%;
+  list-style-type: none;
+  flex-direction: column;
+}
+.list li{
+  padding: 15px;
+  border-bottom: 1px solid var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.btn{
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+.btn-detail{
+  background-color: var(--color-primary);
+  color:#fff;
+  cursor: pointer;
+}
+.btn-detail:hover{
+  background-color:#fff ;
+  color:var(--color-primary);
+}
+.btn-edit{
+  background-color: #ffce00;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-edit:hover{
+  background-color: #fff;
+  color: #ffce00;
+}
+.btn-delete{
+  background-color: #a10e2e;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-delete:hover{
+  background-color: #fff;
+  color: #a10e2e;
+}
+.search{
+  margin: 20px;
+  width: 30%;
+}
+.search-bar{
+  padding: 5px;
+  width: 80%;
+}
+.btn-search{
+  width: 18%;
+  background-color: var(--color-primary);
+  color:#fff;
+  outline: none;
+  cursor: pointer;
+}
+.aux-btns{
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+.aux-btns a{
+  padding-right: 10px;
+  text-decoration: none;
+}
