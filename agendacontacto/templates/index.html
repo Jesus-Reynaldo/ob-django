@@ -2,5 +2,32 @@
 {% block 'title' %} Inicio {% endblock %}
 {% block 'content' %}
 <h1>Bienvenido a tu gestor personal.</h1>
+<div class="cards">
+    <a href="{% url 'contact' %}" class="card">CONTACTO</a>
+    <a href="{% url 'todo' %}" class="card">TAREAS</a>
+</div>
+
+<style>
+  .cards{
+  display: flex;
+  justify-content: space-around;
+}
+.card{
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: var(--color-primary);
+  margin: 20px;
+  text-decoration: none;
+}
+.card:hover{
+  background-color: var(--color-text);
+}
+
+</style>
 
 {% endblock %}

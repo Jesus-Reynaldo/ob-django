@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+{% block 'title' %}Editar | Todo{% endblock  %}
+
+{% block 'styles' %}
+  {% load static %}
+  <link rel="stylesheet" type={% static 'css/forms.css' %}
+{% endblock  %}
+
+{% block 'content' %}
+  <span class="aux-btns">
+    <a href="{% url 'todo' %}">Volver atras</a>
+  </span>
+    <form action="{% url 'todo_edit' id=id %}" method="POST">
+      {% csrf_token %}
+      <table>
+        {{form.as_table}}
+      </table>
+      <div class="btn-wrapper">
+        <input type="submit" value="Enviar" class="btn-send" />
+      </div>
+    </form>
+{% endblock  %}

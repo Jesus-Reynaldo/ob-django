@@ -1,6 +1,7 @@
 {% extends 'layout/base.html' %}
 {% block 'title' %}Contactos{% endblock %}
 {% block 'content' %}
+<h1>CONTACTOS</h1>
   <form class="search" method="GET" action="{% url 'contact' %}">
     <input type="text" name="search" class="search-bar" placeholder="Buscar Contact...">
     <input type="submit" value="Buscar" class="btn btn-search" />
