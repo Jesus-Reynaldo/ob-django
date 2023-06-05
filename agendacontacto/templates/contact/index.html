@@ -1,6 +1,5 @@
 {% extends 'layout/base.html' %}
 {% block 'title' %}Contactos{% endblock %}
-
 {% block 'content' %}
   <form class="search" method="GET" action="{% url 'contact' %}">
     <input type="text" name="search" class="search-bar" placeholder="Buscar Contact...">
@@ -8,15 +7,15 @@
   </form>
   <span class="aux-btns">
     <a href="{% url 'contact' %}">Ver todos</a>
-    <a href="#">Añadir</a>
+    <a href="{% url 'contact_create'%}">Añadir</a>
   </span>
   <ul class="list">
     {% for contact in contacts %}
     <li>{{ contact }}
       <span>
-        <a href="#" class="btn btn-detail">Ver</a>
-        <a href="#" class="btn btn-edit">Editar</a>
-        <a href="#" class="btn btn-delete">Borrar</a>
+        <a href="{% url 'contact_view' id=contact.id %}" class="btn btn-detail">Ver</a>
+        <a href="{% url 'contact_edit' id=contact.id %}" class="btn btn-edit">Editar</a>
+        <a href="{% url 'contact_delete' id=contact.id %}" class="btn btn-delete">Borrar</a>
       </span>
     </li>
     {% endfor %}

@@ -4,4 +4,6 @@ from .models import Contact
 class ContactForm(ModelForm):
   class Meta:
     model = Contact
-    fields ='__all__'
+    exclude = ('date',)
+
+  #name = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))

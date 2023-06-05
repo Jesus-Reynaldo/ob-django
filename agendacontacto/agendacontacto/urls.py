@@ -8,3 +8,4 @@ urlpatterns = [
     path('todo/',include('todo.urls')),
     path('',views.index, name='index'),
 ]
+
